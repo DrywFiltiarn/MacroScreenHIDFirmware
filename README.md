@@ -13,4 +13,4 @@ __NOTE2:__ The screens can be sensitive to which version of the editor is used t
 The screen can be customized by generating a custom background image for the button panel of the screen firmware. And flashing the new version of the panel firmware to the device. The ESP32 side of things shouldn't need to change in order to reconfigure for using the panel to a different panel.
 
 The default Solidworks button layout in this firmware:
-[[https://github.com/DrywFiltiarn/MacroScreenHIDFirmware/blob/main/\_HMI FIRMWARE\_/images/solidworks.png]]
+[[https://github.com/DrywFiltiarn/MacroScreenHIDFirmware/blob/main/\_HMI%20FIRMWARE\_/images/solidworks.png]]
