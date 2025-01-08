@@ -13,4 +13,12 @@ __NOTE2:__ The screens can be sensitive to which version of the editor is used t
 The screen can be customized by generating a custom background image for the button panel of the screen firmware. And flashing the new version of the panel firmware to the device. The ESP32 side of things shouldn't need to change in order to reconfigure for using the panel to a different panel.
 
 The default Solidworks button layout in this firmware:
-[[https://github.com/DrywFiltiarn/MacroScreenHIDFirmware/blob/main/\_HMI%20FIRMWARE\_/images/solidworks.png]]
+![preview](https://raw.githubusercontent.com/DrywFiltiarn/MacroScreenHIDFirmware/refs/heads/main/_HMI%20FIRMWARE_/images/solidworks.png)
+
+If you want to restyle the Macro Screen or assign different icons to buttons you will have to design your own background image. The top 40px of the image is free to use for "decoration" and has no functional use. In the default firmware this is where the Solidworks logo is shown.
+The buttons are all sized to 50px X 50px which results in a 8 buttons wide and 4 rows of buttons. This part is more or less locked in within the actual functionality of the panel firmware and the ESP firmware.
+
+## How it works
+The device will identify as a USB HID Keyboard when connected to the PC and will have predefined key combinations for all of the 32 buttons on the screen.
+Every screen button corresponds with CTRL+ALT+SHIFT plus one of A-Z and 0-6 order from top to bottom and left to right. Button 1 will send CTRL+ALT+SHIFT+A down to button 32 which will send CTRL+ALT+SHIFT+6.
+When you use the Macro Screen with Solidworks, you can go into the customization of the keyboard assignments and look for the correct functions to bind to the keycombinations. Pressing the screen for the keycombo assignment is sufficient and works.
